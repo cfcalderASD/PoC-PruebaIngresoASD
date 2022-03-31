@@ -14,8 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@Service
-public class ActivoServiceImpl<T extends ActivoDTO, E extends Activo, R extends ActivoEntity> implements ActivoService<T, E>{
+public abstract class ActivoServiceImpl<T extends ActivoDTO, E extends Activo, R extends ActivoEntity> implements ActivoService<T, E>{
 
     @Autowired
     private ActivoRepositoryGeneric<R, E> repository;

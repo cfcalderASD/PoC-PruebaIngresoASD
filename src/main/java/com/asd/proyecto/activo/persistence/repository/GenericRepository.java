@@ -4,21 +4,23 @@ import com.asd.proyecto.activo.persistence.dao.ActivoDAO;
 import com.asd.proyecto.activo.persistence.entities.ActivoEntity;
 import com.asd.proyecto.activo.persistence.mapper.ActivoMapper;
 import com.asd.proyecto.activo.usecase.model.Activo;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@Repository
-public class GenericRepository<T extends ActivoEntity, E extends Activo> implements ActivoRepositoryGeneric<T, E>{
+@RequiredArgsConstructor
+public abstract class GenericRepository<T extends ActivoEntity, E extends Activo> implements ActivoRepositoryGeneric<T, E>{
 
     @Autowired
-    private ActivoDAO<T> activoDAO;
+    protected ActivoDAO<T> activoDAO;
 
     @Autowired
-    private ActivoMapper<T, E> activoMapper;
+    protected ActivoMapper<T, E> activoMapper;
 
     @Override
     public Stream<E> findAllActivo() {

@@ -7,6 +7,6 @@ import com.asd.proyecto.activo.usecase.model.Inmueble;
 import com.asd.proyecto.activo.usecase.model.Maquinaria;
 import org.mapstruct.Mapper;
 
-//@Mapper(componentModel = "spring")
-public interface MaquinariaMapperMaquinariaDTO /* extends ActivoMapperDTO<Maquinaria, MaquinariaDTO> */{
+@Mapper(componentModel = "spring")
+public interface MaquinariaMapperMaquinariaDTO extends ActivoMapperDTO<Maquinaria, MaquinariaDTO>{
 }

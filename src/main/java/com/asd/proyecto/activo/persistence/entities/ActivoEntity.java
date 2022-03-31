@@ -1,10 +1,6 @@
 package com.asd.proyecto.activo.persistence.entities;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -12,7 +8,10 @@ import java.time.LocalDate;
 @Data
 @Entity
 @Table(name = "activo")
-@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name="tipo_activo")
+@DiscriminatorValue("generico")
+@Inheritance
+//@Inheritance(strategy = InheritanceType.JOINED)
 public class ActivoEntity {
 
     @Id

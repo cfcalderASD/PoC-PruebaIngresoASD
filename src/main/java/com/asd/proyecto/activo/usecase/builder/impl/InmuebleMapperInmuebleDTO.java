@@ -7,6 +7,6 @@ import com.asd.proyecto.activo.usecase.model.Activo;
 import com.asd.proyecto.activo.usecase.model.Inmueble;
 import org.mapstruct.Mapper;
 
-//@Mapper(componentModel = "spring")
-public interface InmuebleMapperInmuebleDTO/* extends ActivoMapperDTO<Inmueble, InmuebleDTO> */{
+@Mapper(componentModel = "spring")
+public interface InmuebleMapperInmuebleDTO extends ActivoMapperDTO<Inmueble, InmuebleDTO> {
 }
