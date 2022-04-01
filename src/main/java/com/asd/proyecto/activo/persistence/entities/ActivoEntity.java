@@ -23,5 +23,4 @@ public class ActivoEntity {
     String serial;
     LocalDate fechaCompra;
 
-
 }
