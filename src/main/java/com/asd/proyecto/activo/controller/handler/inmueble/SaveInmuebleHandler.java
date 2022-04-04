@@ -1,6 +1,8 @@
 package com.asd.proyecto.activo.controller.handler.inmueble;
 
 import com.asd.proyecto.activo.controller.endpoint.ActivoEndpoint;
+import com.asd.proyecto.activo.persistence.entities.InmuebleEntity;
+import com.asd.proyecto.activo.persistence.repository.ActivoRepositoryGeneric;
 import com.asd.proyecto.activo.usecase.dto.ActivoDTO;
 import com.asd.proyecto.activo.usecase.dto.InmuebleDTO;
 import com.asd.proyecto.activo.usecase.model.Activo;
@@ -21,7 +23,7 @@ public class SaveInmuebleHandler {
     private ActivoService<InmuebleDTO, Inmueble> service;
 
     @PostMapping
-    public BaseResponse<InmuebleDTO> execute(@RequestBody Inmueble inmueble){
+    public BaseResponse<ActivoDTO> execute(@RequestBody Inmueble inmueble){
         return service.saveActivo(inmueble);
     }
 

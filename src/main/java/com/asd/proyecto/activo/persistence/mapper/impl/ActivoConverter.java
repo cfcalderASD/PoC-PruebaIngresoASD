@@ -5,6 +5,7 @@ import com.asd.proyecto.activo.persistence.mapper.ActivoMapper;
 import com.asd.proyecto.activo.usecase.model.Activo;
 
 import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 public class ActivoConverter implements ActivoMapper<ActivoEntity, Activo> {
 
@@ -29,13 +30,4 @@ public class ActivoConverter implements ActivoMapper<ActivoEntity, Activo> {
         return activoEntity;
     }
 
-    @Override
-    public Stream<Activo> entityToModel(Iterable<ActivoEntity> activoEntities) {
-        return null;
-    }
-
-    @Override
-    public Stream<ActivoEntity> modelToEntity(Iterable<Activo> activos) {
-        return null;
-    }
 }

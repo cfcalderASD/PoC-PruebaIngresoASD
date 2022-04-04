@@ -6,6 +6,9 @@ import com.asd.proyecto.activo.persistence.mapper.ActivoMapper;
 import com.asd.proyecto.activo.usecase.model.Activo;
 import com.asd.proyecto.activo.usecase.model.Inmueble;
 
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
+
 public class InmuebleConverter implements ActivoMapper<InmuebleEntity, Inmueble> {
 
 
@@ -31,4 +34,5 @@ public class InmuebleConverter implements ActivoMapper<InmuebleEntity, Inmueble>
         inmuebleEntity.setTipoDeTela( ((Inmueble) activo).getTipoDeTela());
         return inmuebleEntity;
     }
+
 }

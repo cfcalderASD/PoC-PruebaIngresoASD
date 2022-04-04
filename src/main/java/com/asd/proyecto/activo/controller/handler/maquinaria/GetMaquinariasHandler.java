@@ -1,8 +1,10 @@
 package com.asd.proyecto.activo.controller.handler.maquinaria;
 
 import com.asd.proyecto.activo.controller.endpoint.ActivoEndpoint;
+import com.asd.proyecto.activo.usecase.dto.ActivoDTO;
 import com.asd.proyecto.activo.usecase.dto.InmuebleDTO;
 import com.asd.proyecto.activo.usecase.dto.MaquinariaDTO;
+import com.asd.proyecto.activo.usecase.model.Inmueble;
 import com.asd.proyecto.activo.usecase.model.Maquinaria;
 import com.asd.proyecto.activo.usecase.service.ActivoService;
 import com.asd.proyecto.util.BaseResponse;
@@ -18,10 +20,10 @@ import java.util.stream.Stream;
 public class GetMaquinariasHandler {
 
     @Autowired
-    private ActivoService<MaquinariaDTO, Maquinaria> service;
+    ActivoService<MaquinariaDTO, Maquinaria> service;
 
     @GetMapping
-    public BaseResponse<Stream<MaquinariaDTO>> execute(){
+    public BaseResponse<Stream<ActivoDTO>> execute(){
         return service.getAllActivos();
     }
 

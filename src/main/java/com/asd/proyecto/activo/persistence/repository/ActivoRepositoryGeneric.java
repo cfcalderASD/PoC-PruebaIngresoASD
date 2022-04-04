@@ -9,10 +9,10 @@ import java.util.stream.Stream;
 
 public interface ActivoRepositoryGeneric<T extends ActivoEntity, E extends Activo> {
 
-    public Stream<E> findAllActivo();
-    public Stream<E> findActivoByDate(LocalDate date);
-    public E getActivoBySerial(String serial);
-    public E saveActivo(E activo);
-    public E updateActivo(E activo);
+    Stream<Activo> findAllActivo();
+    Stream<Activo> findActivoByDate(LocalDate date);
+    Activo getActivoBySerial(String serial);
+    Activo saveActivo(Activo activo);
+    Activo updateActivo(Activo activo);
 
 }

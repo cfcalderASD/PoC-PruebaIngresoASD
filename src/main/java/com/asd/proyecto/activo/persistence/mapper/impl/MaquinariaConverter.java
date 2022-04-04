@@ -8,6 +8,9 @@ import com.asd.proyecto.activo.usecase.model.Activo;
 import com.asd.proyecto.activo.usecase.model.Inmueble;
 import com.asd.proyecto.activo.usecase.model.Maquinaria;
 
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
+
 public class MaquinariaConverter implements ActivoMapper<MaquinariaEntity, Maquinaria> {
 
     @Override
@@ -32,4 +35,5 @@ public class MaquinariaConverter implements ActivoMapper<MaquinariaEntity, Maqui
         maquinariaEntity.setFabricante( ((Maquinaria) activo).getFabricante());
         return maquinariaEntity;
     }
+
 }

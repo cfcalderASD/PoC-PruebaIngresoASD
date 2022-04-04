@@ -1,6 +1,8 @@
 package com.asd.proyecto.activo.controller.handler.activo;
 
 import com.asd.proyecto.activo.controller.endpoint.ActivoEndpoint;
+import com.asd.proyecto.activo.persistence.entities.ActivoEntity;
+import com.asd.proyecto.activo.persistence.repository.ActivoRepositoryGeneric;
 import com.asd.proyecto.activo.usecase.dto.ActivoDTO;
 import com.asd.proyecto.activo.usecase.model.Activo;
 import com.asd.proyecto.activo.usecase.service.ActivoService;
@@ -20,7 +22,8 @@ public class SaveActivoHandler {
 
     @PostMapping
     public BaseResponse<ActivoDTO> execute(@RequestBody Activo activo){
-        return service.saveActivo(activo);
+
+        return  service.saveActivo(activo);
     }
 
 }

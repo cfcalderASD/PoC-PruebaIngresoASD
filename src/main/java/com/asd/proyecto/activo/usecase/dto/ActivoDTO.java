@@ -13,8 +13,5 @@ public class ActivoDTO implements Serializable {
     protected LocalDate fechaCompra;
     protected String tipo;
 
-    public ActivoDTO(){
-        this.tipo = TipoActivo.ACTIVO.getName();
-    }
 
 }

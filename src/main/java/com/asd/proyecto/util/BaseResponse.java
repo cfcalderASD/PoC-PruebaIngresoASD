@@ -18,6 +18,7 @@ public class BaseResponse<T> implements Serializable {
     public BaseResponse(T data){
         this.data = data;
         this.httpStatus = HttpStatus.OK;
+        this.messsage = "SUCCESS";
     }
 
     public BaseResponse(T data, String messsage){

@@ -9,6 +9,7 @@ import com.asd.proyecto.activo.usecase.service.ActivoService;
 import com.asd.proyecto.util.BaseResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +21,7 @@ public class GetActivoBySerialHandler {
     private ActivoService<ActivoDTO, Activo> service;
 
     @GetMapping(ActivoEndpoint.GET_ACTIVO_BY_SERIAL)
-    public BaseResponse<ActivoDTO> execute(String serial){
+    public BaseResponse<ActivoDTO> execute(@PathVariable String serial){
         return service.getActivoBySerial(serial);
     }
 }

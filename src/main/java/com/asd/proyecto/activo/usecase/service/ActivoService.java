@@ -9,10 +9,10 @@ import java.util.stream.Stream;
 
 public interface ActivoService<T extends ActivoDTO, E extends Activo> {
 
-    BaseResponse<Stream<T>> getAllActivos();
-    BaseResponse<Stream<T>> getActivoByDate(LocalDate date);
-    BaseResponse<T> getActivoBySerial(String serial);
-    BaseResponse<T> saveActivo(E activo);
-    BaseResponse<T> updateActivo(E activo);
+    BaseResponse<Stream<ActivoDTO>> getAllActivos();
+    BaseResponse<Stream<ActivoDTO>> getActivoByDate(LocalDate date);
+    BaseResponse<ActivoDTO> getActivoBySerial(String serial);
+    BaseResponse<ActivoDTO> saveActivo(Activo activo);
+    BaseResponse<ActivoDTO> updateActivo(Activo activo);
 
 }

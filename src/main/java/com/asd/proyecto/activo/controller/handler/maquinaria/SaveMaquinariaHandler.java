@@ -1,6 +1,7 @@
 package com.asd.proyecto.activo.controller.handler.maquinaria;
 
 import com.asd.proyecto.activo.controller.endpoint.ActivoEndpoint;
+import com.asd.proyecto.activo.usecase.dto.ActivoDTO;
 import com.asd.proyecto.activo.usecase.dto.InmuebleDTO;
 import com.asd.proyecto.activo.usecase.dto.MaquinariaDTO;
 import com.asd.proyecto.activo.usecase.model.Inmueble;
@@ -21,7 +22,7 @@ public class SaveMaquinariaHandler {
     private ActivoService<MaquinariaDTO, Maquinaria> service;
 
     @PostMapping
-    public BaseResponse<MaquinariaDTO> execute(@RequestBody Maquinaria maquinaria){
+    public BaseResponse<ActivoDTO> execute(@RequestBody Maquinaria maquinaria){
         return service.saveActivo(maquinaria);
     }
 
