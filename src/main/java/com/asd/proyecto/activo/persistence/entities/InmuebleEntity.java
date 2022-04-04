@@ -18,4 +18,5 @@ public class InmuebleEntity extends ActivoEntity {
 
     String tipoDeTela;
 
+
 }

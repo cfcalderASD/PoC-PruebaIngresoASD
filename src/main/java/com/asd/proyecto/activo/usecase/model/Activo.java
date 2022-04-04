@@ -11,5 +11,6 @@ public class Activo {
     String nombre;
     String serial;
     LocalDate fechaCompra;
+    String tipo;
 
 }

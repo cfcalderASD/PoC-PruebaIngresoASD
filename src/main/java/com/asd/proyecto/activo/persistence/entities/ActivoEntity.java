@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @Data
 @Entity
 @Table(name = "activo")
-@DiscriminatorColumn(name="tipo_activo")
+@DiscriminatorColumn(name="tipo")
 @DiscriminatorValue("generico")
 @Inheritance
 //@Inheritance(strategy = InheritanceType.JOINED)
@@ -22,5 +22,9 @@ public class ActivoEntity {
     String nombre;
     String serial;
     LocalDate fechaCompra;
+
+    @Column(name = "tipo", insertable = false, updatable = false)
+    String tipo;
+
 
 }
